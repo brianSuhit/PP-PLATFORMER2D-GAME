@@ -3,17 +3,17 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    public Vector2 _direction;
+    private Vector2 _direction;
 
-    void Update()
+    private void Update()
     {
-        transform.position = transform.position + new Vector3(_direction.x,0) * speed * Time.deltaTime;
+        transform.position = transform.position + new Vector3(_direction.x, _direction.y) * speed * Time.deltaTime;
     }
 
     /// <summary>
-    /// Write any here
+    /// Set the direction and in Update move the object using transform.position
     /// </summary>
-    /// <param name="direction">Write any here</param>
+    /// <param name="direction">Receive a variable that will be the direction</param>
     public void SetDirection(Vector2 direction)
     {
         _direction = direction;
