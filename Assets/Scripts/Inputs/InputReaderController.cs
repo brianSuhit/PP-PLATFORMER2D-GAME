@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputReader : MonoBehaviour
+public class InputReaderController : MonoBehaviour
 {
     [SerializeField] CharacterMovement characterMovement;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="inputContext"></param>
     public void SetMovementValue(InputAction.CallbackContext inputContext)
     {
         Vector2 inputValue = inputContext.ReadValue<Vector2>();
