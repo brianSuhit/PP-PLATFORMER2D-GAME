@@ -16,4 +16,10 @@ public class InputReaderController : MonoBehaviour
 
         Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
     }
+
+    public void BombThrow(InputAction.CallbackContext inputContext)
+    {
+        
+    }
+
 }

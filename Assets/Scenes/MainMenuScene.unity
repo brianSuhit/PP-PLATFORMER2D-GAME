@@ -897,7 +897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pirate Boom
+  m_text: Super Pirates Boom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c2314380b7ff7d4d9c1e3b697fc6c24, type: 2}
   m_sharedMaterial: {fileID: 528483709717901364, guid: 0c2314380b7ff7d4d9c1e3b697fc6c24, type: 2}
