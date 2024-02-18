@@ -3,7 +3,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    [SerializeField] private Vector2 _direction;
+    private Vector2 _direction;
     private bool _viewRight = true;
 
     private void Update()

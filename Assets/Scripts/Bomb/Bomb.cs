@@ -6,8 +6,10 @@ public class Bomb : MonoBehaviour
     [SerializeField] private Transform bombPoint;
 
     [ContextMenu("Throw")]
-    public void Throw()
+    public void BombThrow()
     {
-        Instantiate(bombPrefab, bombPoint.position, transform.rotation);
+        var boom = Instantiate(bombPrefab, bombPoint.position, transform.rotation);
+        var boombMovement = boom.GetComponent<BombMovement>();
+        boombMovement.SetDirection(bombPoint.right);
     }
 }
