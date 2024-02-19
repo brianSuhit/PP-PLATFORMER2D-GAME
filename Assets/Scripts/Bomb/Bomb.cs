@@ -10,6 +10,6 @@ public class Bomb : MonoBehaviour
     {
         var boom = Instantiate(bombPrefab, bombPoint.position, transform.rotation);
         var boombMovement = boom.GetComponent<BombMovement>();
-        boombMovement.SetDirection(bombPoint.right);
+        boombMovement.SetDirection(bombPoint.up);
     }
 }

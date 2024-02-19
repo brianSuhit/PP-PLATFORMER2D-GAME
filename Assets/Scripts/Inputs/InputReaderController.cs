@@ -5,6 +5,7 @@ public class InputReaderController : MonoBehaviour
 {
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private Bomb bomb;
+    [SerializeField] private CharacterJump characterJump;
 
     /// <summary>
     /// 
@@ -30,5 +31,13 @@ public class InputReaderController : MonoBehaviour
 
             bomb.BombThrow();
         }   
+    }
+
+    public void Jump(InputAction.CallbackContext inputContext)
+    {
+        if (inputContext.started)
+        {
+            characterJump.Jump();
+        }
     }
 }
