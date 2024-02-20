@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &108029927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 284159312}
   - component: {fileID: 284159314}
   - component: {fileID: 284159313}
+  - component: {fileID: 284159315}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -316,6 +317,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &284159315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284159311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0056349051b066b41b2ed0e34861180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 284159313}
+  characterMovement: {fileID: 1888311345}
+  characterJump: {fileID: 1888311351}
+  animatorParameterState: state
 --- !u!1 &368266132
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  _direction: {x: 0, y: 0}
 --- !u!1 &1888311344
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  _direction: {x: 0, y: 0}
 --- !u!4 &1888311347
 Transform:
   m_ObjectHideFlags: 0
@@ -790,7 +809,7 @@ Transform:
   m_GameObject: {fileID: 1888311344}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -2.99, z: 0}
+  m_LocalPosition: {x: -6, y: -2.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -884,6 +903,8 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 8
+  isJumping: 0
+  isFalling: 0
 --- !u!50 &1888311352
 Rigidbody2D:
   serializedVersion: 4
@@ -1119,8 +1140,8 @@ Transform:
   m_GameObject: {fileID: 2036725471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: -4.43, z: 0}
-  m_LocalScale: {x: 19.109999, y: 1, z: 1}
+  m_LocalPosition: {x: 7.1, y: -4.43, z: 0}
+  m_LocalScale: {x: 32, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

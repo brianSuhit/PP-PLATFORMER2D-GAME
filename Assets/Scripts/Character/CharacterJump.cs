@@ -12,6 +12,9 @@ public class CharacterJump : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask Ground;
 
+    public bool isJumping = false;
+    public bool isFalling = false;
+
     private void OnEnable()
     {
         if (rigidBody2D)
@@ -41,6 +44,9 @@ public class CharacterJump : MonoBehaviour
 
     private void FixedUpdate()
     {
+        isJumping = rigidBody2D.velocity.y > .1f;
+        isFalling = rigidBody2D.velocity.y < -.1f;
+
         if (_shouldJump && IsGrounded())
         {
             rigidBody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

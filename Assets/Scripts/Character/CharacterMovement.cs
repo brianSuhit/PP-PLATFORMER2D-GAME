@@ -3,7 +3,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    private Vector2 _direction;
+    public Vector2 _direction;
     private bool _viewRight = true;
 
     private void Update()
@@ -33,10 +33,6 @@ public class CharacterMovement : MonoBehaviour
     private void Spin()
     {
         _viewRight = !_viewRight;
-        //Vector3 scale = transform.localScale;
-        //scale.x *= -1;
-        //transform.localScale = scale;
-
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 }   
