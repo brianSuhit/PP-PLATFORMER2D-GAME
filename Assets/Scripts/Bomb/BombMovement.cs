@@ -18,9 +18,13 @@ public class BombMovement : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void FixedUpdate()
     {
-        playerRB.AddForce(_initialForce * speed, ForceMode2D.Impulse); 
+        if (_initialForce != Vector2.zero)
+        {
+            playerRB.AddForce(_initialForce * speed, ForceMode2D.Impulse);
+            _initialForce = Vector2.zero;
+        }
     }
 
     public void SetDirection(Vector2 force)

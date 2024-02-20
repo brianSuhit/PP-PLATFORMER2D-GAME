@@ -7,10 +7,6 @@ public class InputReaderController : MonoBehaviour
     [SerializeField] private Bomb bomb;
     [SerializeField] private CharacterJump characterJump;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="inputContext"></param>
     public void SetMovementValue(InputAction.CallbackContext inputContext)
     {
         Vector2 inputValue = inputContext.ReadValue<Vector2>();

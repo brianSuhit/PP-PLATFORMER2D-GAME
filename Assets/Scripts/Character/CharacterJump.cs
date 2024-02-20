@@ -41,7 +41,6 @@ public class CharacterJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (_shouldJump && IsGrounded())
         {
             rigidBody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
