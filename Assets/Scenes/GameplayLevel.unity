@@ -1417,7 +1417,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 678300062}
-  - {fileID: 1057459436}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &300908421
@@ -1978,9 +1977,8 @@ GameObject:
   - component: {fileID: 1057459435}
   - component: {fileID: 1057459434}
   - component: {fileID: 1057459433}
-  - component: {fileID: 1057459437}
   m_Layer: 5
-  m_Name: AdvicePosterDialogue
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2020,7 +2018,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2035,8 +2033,8 @@ Canvas:
   m_GameObject: {fileID: 1057459432}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 593161187}
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2047,7 +2045,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1057459436
 RectTransform:
@@ -2062,26 +2060,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1425394793}
-  m_Father: {fileID: 300908420}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1057459437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057459432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aed9e12fe7592249877d1177dbc7dca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasScaler: {fileID: 1057459434}
 --- !u!1 &1124944466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,3 +3548,4 @@ SceneRoots:
   - {fileID: 891905103}
   - {fileID: 232730967}
   - {fileID: 300908420}
+  - {fileID: 1057459436}

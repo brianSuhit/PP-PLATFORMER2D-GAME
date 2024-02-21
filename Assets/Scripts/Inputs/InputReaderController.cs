@@ -6,6 +6,7 @@ public class InputReaderController : MonoBehaviour
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private Bomb bomb;
     [SerializeField] private CharacterJump characterJump;
+    [SerializeField] private AdvicePoster poster;
 
     public void SetMovementValue(InputAction.CallbackContext inputContext)
     {
@@ -24,16 +25,37 @@ public class InputReaderController : MonoBehaviour
                 Debug.LogError($"{name} bomb is null");
                 return;
             }
-
             bomb.BombThrow();
-        }   
+        }
     }
 
     public void Jump(InputAction.CallbackContext inputContext)
     {
         if (inputContext.started)
         {
+            if (characterJump == null)
+            {
+                Debug.LogError($"{name} character jump is null");
+                return;
+            }
             characterJump.Jump();
+        }
+    }
+
+    public void StartAdvicePosterDialogue(InputAction.CallbackContext inputContext)
+    {
+        if (inputContext.started)
+        {
+            if (poster == null)
+            {
+                Debug.LogError($"{name}: startDialogue is null!");
+                return;
+            }
+
+            if (poster.isPlayerInRange)
+            {
+                poster.StartDialogue();
+            }
         }
     }
 }
