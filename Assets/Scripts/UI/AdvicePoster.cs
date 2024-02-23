@@ -2,24 +2,20 @@ using UnityEngine;
 
 public class AdvicePoster : MonoBehaviour
 {
-    public bool isPlayerInRange;
-
     [SerializeField] private GameObject posterMark;
     [SerializeField] private GameObject advicePosterPanel;
 
-    public void StartDialogue()
+    private void Start()
     {
-        Debug.Log("estoy en rango y me presione");
-        posterMark.SetActive(false);
-        advicePosterPanel.SetActive(true);
+        posterMark.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isPlayerInRange = true;
-            posterMark.SetActive(true);
+            posterMark.SetActive(false);
+            advicePosterPanel.SetActive(true);
         }
     }
 
@@ -27,8 +23,7 @@ public class AdvicePoster : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isPlayerInRange = false;
-            posterMark.SetActive(false);
+            posterMark.SetActive(true);
             if (advicePosterPanel != null)
             {
                 advicePosterPanel.SetActive(false);
