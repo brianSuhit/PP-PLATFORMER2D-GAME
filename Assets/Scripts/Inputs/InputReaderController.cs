@@ -12,7 +12,7 @@ public class InputReaderController : MonoBehaviour
         Vector2 inputValue = inputContext.ReadValue<Vector2>();
         characterMovement.SetDirection(inputValue);
 
-        Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
+        //Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
     }
 
     public void Shoot(InputAction.CallbackContext inputContext)
