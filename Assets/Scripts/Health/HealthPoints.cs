@@ -2,10 +2,23 @@ using UnityEngine;
 
 public class HealthPoints : MonoBehaviour
 {
-    [SerializeField] private int HP = 3;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int health = 100;
+
+    [SerializeField] private bool shouldDestroyOnDeath;
+
+    public void Start()
+    {
+        health = maxHealth;
+    }
 
     public void TakeDamage(int damage)
     {
-        HP -= damage;
+        health -= damage;
+
+        if (shouldDestroyOnDeath && health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
