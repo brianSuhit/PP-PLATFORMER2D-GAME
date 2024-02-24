@@ -7,12 +7,14 @@ public class InputReaderController : MonoBehaviour
     [SerializeField] private Bomb bomb;
     [SerializeField] private CharacterJump characterJump;
 
+    [SerializeField] private AdvicePoster advicePoster;
+
     public void SetMovementValue(InputAction.CallbackContext inputContext)
     {
         Vector2 inputValue = inputContext.ReadValue<Vector2>();
         characterMovement.SetDirection(inputValue);
 
-        //Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
+        Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
     }
 
     public void Shoot(InputAction.CallbackContext inputContext)
@@ -38,6 +40,23 @@ public class InputReaderController : MonoBehaviour
                 return;
             }
             characterJump.Jump();
+        }
+    }
+
+    public void SetStartAdviceDialogue(InputAction.CallbackContext inputContext)
+    {
+        if (inputContext.started)
+        {
+            if (advicePoster == null)
+            {
+                Debug.LogError($"{name} advice poster is null");
+                return;
+            }
+
+            if (advicePoster.isPlayerInRange)
+            {
+                advicePoster.StartDialogue();
+            }
         }
     }
 }
