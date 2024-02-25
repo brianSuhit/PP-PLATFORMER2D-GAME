@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d6a1ccc76d7c6488f7ce2fea5e9696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: TutorialScene
+  startButton: LevelOne
 --- !u!114 &435699829
 MonoBehaviour:
   m_ObjectHideFlags: 0
