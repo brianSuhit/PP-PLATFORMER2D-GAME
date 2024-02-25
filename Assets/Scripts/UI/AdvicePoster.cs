@@ -13,11 +13,6 @@ public class AdvicePoster : MonoBehaviour
         advicePosterPanel.SetActive(true);
     }
 
-    //private void Start()
-    //{
-    //    posterMark.SetActive(true);
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
