@@ -4,12 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverMenu;
-    [SerializeField] private HealthPoints playerHealthPoints;
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource levelMusic;
+    [SerializeField] private AudioSource loseMusic;
 
+    [Header("Buttons Settings")]
     [SerializeField] private string buttonToMenu = "add level name here";
     [SerializeField] private string buttonToResetGame = "add level name here";
     [SerializeField] private GameObject FirstButtonSelected;
+
+    [Header("Other Settings")]
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private HealthPoints playerHealthPoints;
 
     private void Update()
     {
@@ -38,6 +44,7 @@ public class GameOverController : MonoBehaviour
         if (playerHealthPoints.health <= 0)
         {
             gameOverMenu.SetActive(true);
+            levelMusic.Pause();
         }
     }
 }

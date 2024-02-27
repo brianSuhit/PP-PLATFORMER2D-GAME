@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ScaleObject : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float amplitude = 0.1f;
+    [SerializeField] private float speed = 1.0f;
+    [SerializeField] private float amplitude = 0.1f;
 
     void Update()
     {

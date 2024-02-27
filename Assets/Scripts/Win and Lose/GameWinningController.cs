@@ -4,17 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class GameWinningController : MonoBehaviour
 {
-    [SerializeField] private GameObject gameWinningMenu;
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource levelMusic;
+    [SerializeField] private AudioSource WinningMusic;
 
+    [Header("Buttons Settings")]
     [SerializeField] private string buttonToMenu = "add level name here";
     [SerializeField] private string buttonToResetGame = "add level name here";
     [SerializeField] private GameObject FirstButtonSelected;
 
+    [Header("Others Settings")]
+    [SerializeField] private GameObject gameWinningMenu;
+    [SerializeField] private string playerTag = "Player";
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag(playerTag))
         {
             gameWinningMenu.SetActive(true);
+            levelMusic.Pause();
         }
     }
 

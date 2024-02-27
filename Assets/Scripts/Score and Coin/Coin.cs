@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    [SerializeField] private AudioSource coinSound;
     [SerializeField] private GameObject effect;
     [SerializeField] private float scoreAmount;
 
@@ -11,6 +12,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            coinSound.Play();
             score.ScorePoints(scoreAmount);
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);

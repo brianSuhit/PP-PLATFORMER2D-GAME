@@ -4,6 +4,7 @@ public class AdvicePoster : MonoBehaviour
 {
     public bool isPlayerInRange;
 
+    [SerializeField] private string playerTag = "Player";
     [SerializeField] private GameObject posterMark;
     [SerializeField] private GameObject advicePosterPanel;
 
@@ -15,7 +16,7 @@ public class AdvicePoster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(playerTag))
         {
             isPlayerInRange = true;
             posterMark.SetActive(true);
@@ -24,7 +25,7 @@ public class AdvicePoster : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(playerTag))
         {
             isPlayerInRange = false;
             posterMark.SetActive(false);
