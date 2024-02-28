@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class InputReaderController : MonoBehaviour
 {
     [SerializeField] private CharacterMovement characterMovement;
-    [SerializeField] private Bomb bomb;
     [SerializeField] private CharacterJump characterJump;
 
     [SerializeField] private AdvicePoster advicePoster;
@@ -16,19 +15,6 @@ public class InputReaderController : MonoBehaviour
 
         Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
     }
-
-    //public void Shoot(InputAction.CallbackContext inputContext)
-    //{
-    //    if (inputContext.started)
-    //    {
-    //        if (bomb == null)
-    //        {
-    //            Debug.LogError($"{name} bomb is null");
-    //            return;
-    //        }
-    //        bomb.BombThrow();
-    //    }
-    //}
 
     public void Jump(InputAction.CallbackContext inputContext)
     {

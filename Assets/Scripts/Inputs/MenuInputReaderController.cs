@@ -6,7 +6,7 @@ public class MenuInputBehaviour : MonoBehaviour
     [SerializeField] private string startButton = "add level name here";
 
     /// <summary>
-    /// Init the game by loading the designated "startButton" scene.
+    /// This method init the game.
     /// </summary>
     public void StartButton()
     {
@@ -14,7 +14,7 @@ public class MenuInputBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Terminates the game/application gracefully.
+    /// This method terminates the game/application gracefully.
     /// </summary>
     public void ExitButton()
     {

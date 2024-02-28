@@ -26,6 +26,9 @@ public class GameWinningController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This method resets the game after win.
+    /// </summary>
     public void ResetButton()
     {
         SceneManager.LoadScene(buttonToResetGame);
@@ -33,6 +36,9 @@ public class GameWinningController : MonoBehaviour
         eventSystem.SetSelectedGameObject(FirstButtonSelected, new BaseEventData(eventSystem));
     }
 
+    /// <summary>
+    /// This method loads the main menu scene.
+    /// </summary>
     public void MenuButton()
     {
         SceneManager.LoadScene(buttonToMenu);

@@ -13,6 +13,9 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject eventSystemButtonSelected;
     [SerializeField] private GameObject eventSystemSecondButtonSelected;
 
+    /// <summary>
+    /// This method activates the menu, pauses the game music and freezes the time.
+    /// </summary>
     public void PauseButton()
     {
         pauseMenu.SetActive(true);
@@ -22,6 +25,9 @@ public class PauseController : MonoBehaviour
         eventSystem.SetSelectedGameObject(eventSystemButtonSelected, new BaseEventData(eventSystem));
     }
 
+    /// <summary>
+    /// This method deactivates the menu, returning to the game at the moment before pausing it.
+    /// </summary>
     public void ResumeButton()
     {
         pauseMenu.SetActive(false);
@@ -31,6 +37,9 @@ public class PauseController : MonoBehaviour
         eventSystem.SetSelectedGameObject(eventSystemSecondButtonSelected, new BaseEventData(eventSystem));
     }
 
+    /// <summary>
+    /// This method loads the main menu scene.
+    /// </summary>
     public void MenuButton()
     {
         SceneManager.LoadScene(buttonToMenu);

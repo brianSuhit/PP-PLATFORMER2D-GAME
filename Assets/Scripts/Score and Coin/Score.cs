@@ -17,6 +17,10 @@ public class Score : MonoBehaviour
         _textMesh.text = _points.ToString("0");
     }
 
+    /// <summary>
+    /// This method increases the current score by the value indicated by the points parameter.
+    /// </summary>
+    /// <param name="points">The amount of points to add to the current score</param>
     public void ScorePoints(float points)
     {
         _points += points;

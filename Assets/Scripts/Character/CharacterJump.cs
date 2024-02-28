@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+
+public delegate void Action();
 
 public class CharacterJump : MonoBehaviour
 {
@@ -13,10 +14,10 @@ public class CharacterJump : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask Ground;
 
-    [SerializeField] private AudioSource playerJump;
-
     public bool isJumping = false;
     public bool isFalling = false;
+
+    public Action onJump;
 
     private void OnEnable()
     {
@@ -54,7 +55,11 @@ public class CharacterJump : MonoBehaviour
         {
             rigidBody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _shouldJump = false;
-            playerJump.Play();
+
+            if (onJump != null)
+            {
+                onJump();
+            }
         }
 
         if (rigidBody2D.velocity.y < 0)

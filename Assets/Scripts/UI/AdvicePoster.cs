@@ -8,6 +8,9 @@ public class AdvicePoster : MonoBehaviour
     [SerializeField] private GameObject posterMark;
     [SerializeField] private GameObject advicePosterPanel;
 
+    /// <summary>
+    /// This method activates canvas with the tutorial text and deactivates the interaction icon.
+    /// </summary>
     public void StartDialogue()
     {
         posterMark.SetActive(false);

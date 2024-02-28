@@ -10,7 +10,6 @@ public class CanvasScalerController : MonoBehaviour
         SetAspectRatioMatch();
     }
 
-
     private void Update()
     {
         SetAspectRatioMatch();
