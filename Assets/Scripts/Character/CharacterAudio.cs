@@ -34,11 +34,17 @@ public class CharacterAudio : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays the player jump sound when handling a jump event.
+    /// </summary>
     private void HandleJump()
     {
         playerJumpSound.Play();
     }
 
+    /// <summary>
+    /// Plays the player collect coin sound when handling a collection event.
+    /// </summary>
     private void HandleCollect()
     {
         playerCollectCoinSound.Play();

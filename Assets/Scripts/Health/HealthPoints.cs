@@ -12,6 +12,10 @@ public class HealthPoints : MonoBehaviour
         health = maxHealth;
     }
 
+    /// <summary>
+    /// Applies damage to the object and handles potential destruction upon death.
+    /// </summary>
+    /// <param name="damage">The amount of damage to be taken</param>
     public void TakeDamage(int damage)
     {
         health -= damage;

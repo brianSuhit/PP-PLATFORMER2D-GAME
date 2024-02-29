@@ -41,6 +41,9 @@ public class CharacterJump : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Indicates that it can be skipped. It is checked here because the jump is made in FixedUpdate.
+    /// </summary>
     public void Jump()
     {
         _shouldJump = true;
@@ -72,6 +75,10 @@ public class CharacterJump : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the object is currently grounded.
+    /// </summary>
+    /// <returns>True if the object is grounded, false otherwise</returns>
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, Ground);

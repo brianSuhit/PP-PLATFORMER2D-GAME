@@ -30,6 +30,9 @@ public class CharacterMovement : MonoBehaviour
         _direction = direction;
     }
 
+    /// <summary>
+    /// Rotates the object 180 degrees around its Y-axis.
+    /// </summary>
     private void Spin()
     {
         _viewRight = !_viewRight;

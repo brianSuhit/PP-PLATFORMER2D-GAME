@@ -8,6 +8,10 @@ public class InputReaderController : MonoBehaviour
 
     [SerializeField] private AdvicePoster advicePoster;
 
+    /// <summary>
+    /// Sets the movement direction of the character based on user input.
+    /// </summary>
+    /// <param name="inputContext">Receives input from the player</param>
     public void SetMovementValue(InputAction.CallbackContext inputContext)
     {
         Vector2 inputValue = inputContext.ReadValue<Vector2>();
@@ -16,6 +20,10 @@ public class InputReaderController : MonoBehaviour
         Debug.Log($"{gameObject.name}: Event risen. Value: {inputValue}");
     }
 
+    /// <summary>
+    /// Access the jump method and jump the character.
+    /// </summary>
+    /// <param name="inputContext">Receives input from the player</param>
     public void Jump(InputAction.CallbackContext inputContext)
     {
         if (inputContext.started)
@@ -29,20 +37,24 @@ public class InputReaderController : MonoBehaviour
         }
     }
 
-    public void SetStartAdviceDialogue(InputAction.CallbackContext inputContext)
-    {
-        if (inputContext.started)
+    /// <summary>
+    /// Starts the dialogue text if the player is within range.
+    /// </summary>
+    /// <param name="inputContext">Receives input from the player</param>
+        public void SetStartAdviceDialogue(InputAction.CallbackContext inputContext)
         {
-            if (advicePoster == null)
+            if (inputContext.started)
             {
-                Debug.LogError($"{name} advice poster is null");
-                return;
-            }
+                if (advicePoster == null)
+                {
+                    Debug.LogError($"{name} advice poster is null");
+                    return;
+                }
 
-            if (advicePoster.isPlayerInRange)
-            {
-                advicePoster.StartDialogue();
+                if (advicePoster.isPlayerInRange)
+                {
+                    advicePoster.StartDialogue();
+                }
             }
         }
-    }
 }
