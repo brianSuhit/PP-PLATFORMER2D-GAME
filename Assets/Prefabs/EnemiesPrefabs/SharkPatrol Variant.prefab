@@ -138,6 +138,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyShark
       objectReference: {fileID: 0}
+    - target: {fileID: 5831795624644914832, guid: 19b9bf6b15552e042b248875f905bd5d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8438301
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831795624644914832, guid: 19b9bf6b15552e042b248875f905bd5d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.003969
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831795624644914832, guid: 19b9bf6b15552e042b248875f905bd5d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.08288002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831795624644914832, guid: 19b9bf6b15552e042b248875f905bd5d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.001984477
+      objectReference: {fileID: 0}
     - target: {fileID: 5937667297471645534, guid: 19b9bf6b15552e042b248875f905bd5d, type: 3}
       propertyPath: m_Icon
       value: 

@@ -57,6 +57,11 @@ public class GameOverController : MonoBehaviour
     /// </summary>
     public void EndLevel()
     {
+        //if (playerHealthPoints == null)
+        //{
+        //    Debug.LogError($"{name} player health is null");
+        //    return;
+        //}
         if (playerHealthPoints.health <= 0)
         {
             gameOverMenu.SetActive(true);
