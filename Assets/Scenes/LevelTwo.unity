@@ -706,7 +706,7 @@ PrefabInstance:
     - target: {fileID: 6070467693974569042, guid: 66afb50e4834b9e4f84bec3677f4cdde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 989935190}
     - target: {fileID: 6070467693974569042, guid: 66afb50e4834b9e4f84bec3677f4cdde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartButton
@@ -14849,7 +14849,7 @@ PrefabInstance:
     - target: {fileID: 6070467693974569042, guid: 66afb50e4834b9e4f84bec3677f4cdde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 989935190}
     - target: {fileID: 6070467693974569042, guid: 66afb50e4834b9e4f84bec3677f4cdde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MenuButton
