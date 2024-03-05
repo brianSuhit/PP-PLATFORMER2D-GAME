@@ -9,7 +9,7 @@ Trabaje sobre todo en entender y aplicar las fisicas a un objeto, en este caso e
  Implemente una forma diferente de tutorial para variar, esta ves es un cartel que al presionar la F te muestra los controles.
  
 Algo que tambien quiero destacar es que fui mucho mas preciso a la hora de nombrar variables y metodos, tambien agregue summaries a metodos propios para quien vea el codigo tenga mayor comprension de lo que cada uno hace.
-Por ultimo agregue un script al canvas, para que se escale automaticamente por el hancho o largo dependiendo del tamaño de pantalla donde se reproduzca.
+Por ultimo agregue un script al canvas, para que se escale automaticamente por el ancho o largo dependiendo del tamaño de pantalla donde se reproduzca.
  
  El sistema de vida/daño se mantiene con la misma logica que el anterior proyecto, de la misma manera la carga de niveles y los menus con sus respectivos botones.
 
