@@ -16,5 +16,5 @@ Por ultimo agregue un script al canvas, para que se escale automaticamente por e
  ## Conclusion
  Fue increiblemente tedioso y divertido el trabajar con animaciones 2D y tiles, sobre todo por la paciencia! pero gracias a eso logre entender como funciona de mejor manera el sistema 2D de Unity. Intentare en mi proximo proyecto ( que sera 3D ) implementar un poco mas de eventos y programacion orientada a objetos.
 
-## Link directo para jugar en la web
+### Link directo para jugar en la web
 https://briansuhit.itch.io/super-captain-coin-collector
